@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <h1>Change Background Color</h1>
+    <input type="text" id="bg-color"><br>
+    <h1>Change Text Color</h1>
+    <input type="text" id="txt-color"><br>
+    <h1>Change Font Size</h1>
+    <input type="text" id="font-size">
+    <script>
+        var bgColor = document.getElementById("bg-color")
+        var txtColor = document.getElementById("txt-color")
+        var fontSize = document.getElementById("font-size")
+
+        bgColor.addEventListener("keyup",function(event){
+            var body = document.querySelector("body")
+            body.style.backgroundColor = event.target.value
+        })
+
+        txtColor.addEventListener('keyup',function(event){
+            var txt = document.querySelector("body")
+            txt.style.color = event.target.value
+        })
+
+        fontSize.addEventListener('keyup',function(event){
+            var fSize = document.querySelector("body")
+            fSize.style.fontSize = event.target.value
+        })
+    </script>
+</body>
+</html>
